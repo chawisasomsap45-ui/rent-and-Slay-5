@@ -28,7 +28,14 @@ import {
   getDownloadURL, 
   deleteObject 
 } from 'firebase/storage';
-import config from '../../firebase-applet-config.json';
+imporconst firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+};
 import { UserProfile, RentalOrder, UserFile, LenderProfile, ShoeListing, Dispute, KycStatus, EscrowStatus, SupportTicket, SupportMessage } from '../types';
 
 // Error Handler helper as per Firebase skill
