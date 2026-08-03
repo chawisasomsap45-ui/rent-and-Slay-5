@@ -28,7 +28,7 @@ import {
   getDownloadURL, 
   deleteObject 
 } from 'firebase/storage';
-imporconst firebaseConfig = {
+const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
@@ -41,8 +41,7 @@ import { UserProfile, RentalOrder, UserFile, LenderProfile, ShoeListing, Dispute
 // Error Handler helper as per Firebase skill
 export enum OperationType {
   CREATE = 'create',
-  UPDATE = 'update',
-  DELETE = 'delete',
+  UPDATE = import  DELETE = 'delete',
   LIST = 'list',
   GET = 'get',
   WRITE = 'write',
